@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script async="" src="https://ssl.google-analytics.com/ga.js"></script>
+    <meta charset="UTF-8">
+    <title>首页 - 知乎</title>
+
+    <style type="text/css">
+        body.zhi {
+            padding-top: 46px;
+        }
+        body {
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 17px;
+            line-height: 2.0;
+            word-wrap: break-word;
+            color: #222;
+            background-color: #FFF;
+        }
+        body {
+        }
+        body, ul, ol, li, p, h1, h2, h3, h4, h5 {
+            margin: 0px;
+            padding: 0px;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .zh-top {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 20;
+            width: 100%;
+            height: 45px;
+            background: transparent linear-gradient(to bottom, #086ED5, #055DB5) repeat scroll 0% 0%;
+            border-bottom: 1px solid #044E97;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 0px rgba(255, 255, 255, 0.15) inset;
+        }
+        .zh-top-link-logo {
+            float: left;
+            width: 61px;
+            height: 100%;
+            background-image: url("/static/revved/img/sticky_header/new_logo.010e8320.png");
+            background-repeat: no-repeat;
+            background-position: 0px 8px;
+            text-indent: -9999px;
+            color: #FFF;
+        }
+        .top-nav-profile {
+            float: right;
+            position: relative;
+            min-width: 120px;
+            margin-left: 15px;
+            z-index: 10;
+        }
+        .top-nav-profile .zu-top-nav-userinfo {
+            position: relative;
+            height: 45px;
+            line-height: 45px;
+            text-indent: 46px;
+            color: #FFF;
+            text-decoration: none;
+            border-top: 0px none;
+            background: transparent none repeat scroll 0% 0%;
+            box-shadow: none;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .top-nav-profile a {
+            display: block;
+            width: 120px;
+            background-color: #095FB3;
+            text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
+            font-size: 14px;
+        }
+        .zh-main {
+            min-height: 340px;
+            padding: 25px 0px 50px;
+            position: relative;
+            z-index: 2;
+        }
+        .zh-wrap {
+            width: 960px;
+            margin: 0px auto;
+            clear: both;
+        }
+        .clearfix {
+        }
+        .zh-main-content {
+            float: left;
+            width: 100%;
+        }
+        .active {
+            color: dodgerblue;
+        }
+        .zh-container {
+            text-align: center;
+        }
+        .zh-main {
+            width: 300px;
+            margin: auto;
+        }
+        .zh-header h1 {
+            font-size: 50px;
+            color: dodgerblue;
+        }
+        .zh-header h2 {
+            font-size: 18px;
+        }
+        .zh-tab {
+            margin-top: 30px;
+        }
+        .zh-tab a {
+            margin: 10px;
+        }
+        .zh-block {
+            height: 3px;
+            width: 45px;
+            position: relative;
+            left: 100px;;
+            background-color: dodgerblue;
+        }
+        .zh-form-textinput {
+            margin-top: 20px;
+            border-style: solid;
+            border-radius: 3px;
+            border-width: 1px;
+            border-color: lightgray;
+        }
+        .zh-input-wrapper + .zh-input-wrapper {
+            border-style: solid;
+            border-width: 0px;
+            border-top-width: 1px;
+            border-color: lightgray;
+        }
+        .zh-input-wrapper input {
+            width: 90%;
+            height: 35px;
+            margin: 5px;
+            border: none;
+            outline: none;
+        }
+        .hide-text {
+            font: 0px/0 a;
+            font-family: a;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0px;
+            line-height: 0;
+            font-size-adjust: none;
+            font-stretch: normal;
+            -x-system-font: none;
+            font-feature-settings: normal;
+            font-language-override: normal;
+            font-kerning: auto;
+            font-synthesis: weight style;
+            font-variant-alternates: normal;
+            font-variant-caps: normal;
+            font-variant-east-asian: normal;
+            font-variant-ligatures: normal;
+            font-variant-numeric: normal;
+            font-variant-position: normal;
+            color: transparent;
+            text-shadow: none;
+            background-color: transparent;
+            border: 0px none;
+        .zh-top-add-question {
+            float: right;
+            width: 67px;
+            height: 30px;
+            line-height: 0px;
+            margin-top: 10px;
+            border: 1px solid #0C74DD;
+            border-top-width: 1px;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-top-style: solid;
+            border-right-style: solid;
+            border-bottom-style: solid;
+            border-left-style: solid;
+            border-top-color: #0C74DD;
+            border-right-color: #0C74DD;
+            border-bottom-color: #0C74DD;
+            border-left-color: #0C74DD;
+            -moz-border-top-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-bottom-colors: none;
+            -moz-border-left-colors: none;
+            border-image-source: none;
+            border-image-slice: 100% 100% 100% 100%;
+            border-image-width: 1 1 1 1;
+            border-image-outset: 0 0 0 0;
+            border-image-repeat: stretch stretch;
+            border-radius: 4px;
+            background: transparent linear-gradient(to bottom, #1D82EC, #0B56A2) repeat scroll 0% 0%;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), 0px 1px 1px rgba(255, 255, 255, 0.15) inset;
+            color: #F2E1E1;
+            font-size: 20px;
+            text-align: center;
+            text-shadow: 0px 1px 1px rgba(29, 11, 11, 0.1);
+            outline: 0px none;
+            outline-width: 0px;
+            outline-style: none;
+            outline-color: -moz-use-text-color;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out 0s;
+        }
+        .zh-button-big {
+            width: 100%;
+            height: 35px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .float-right {
+            float: right;
+        }
+    </style>
+</head>
+
+
+<body class="zh-body">
+<div role="navigation" class="zh-top">
+    <div class="zh-wrap modal-shifting clearfix" id="zh-top-inner">
+    <a href="/" class="zh-top-link-logo" id="zh-top-link-logo" data-za-c="view_home" data-za-a="visit_home" data-za-l="top_navigation_zhihu_logo">知乎</a>
+    <div class="top-nav-profile">
+        <a href="/people/user" class="zh-top-nav-userinfo ">
+            <span class="name">user</span>
+            <img class="Avatar" src="https://pic4.zhimg.com/c6c9eebba6f19007d3d573b5178321e3_s.png" srcset="https://pic4.zhimg.com/c6c9eebba6f19007d3d573b5178321e3_xs.png 2x" alt="Maoya" />
+                <span
+                    id="zh-top-nav-new-pm" class="zh-noti-number zh-top-nav-pm-count" style="visibility:hidden" data-count="0">
+                </span>
+        </a>
+        <ul class="top-nav-dropdown" id="top-nav-profile-dropdown">
+            <li>
+                <a href="/people/user">
+                    <i class="zg-icon zg-icon-dd-home"></i>我的主页
+                </a>
+            </li>
+
+            <li>
+                <a href="/inbox">
+                    <i class="zh-icon zh-icon-dd-pm"></i>私信
+                        <span id="zh-top-nav-pm-count" class="zh-top-nav-pm-count zh-noti-number"
+                              style="visibility:hidden" data-count="0">
+
+                        </span>
+                </a>
+            </li>
+            <li>
+                <a href="/settings">
+                    <i class="zh-icon zh-icon-dd-settings"></i>设置
+                </a>
+            </li>
+            <li>
+                <a href="/logout">
+                    <i class="zg-icon zg-icon-dd-logout"></i>退出
+                </a>
+            </li>
+        </ul>
+    </div>
+        <button class="zh-top-add-question" id="zh-top-add-question">提问</button>
+    <div role="search" id="zh-top-search" class="zu-top-search">
+        <form method="GET" action="/search" id="zh-top-search-form" class="zu-top-search-form">
+            <input type="hidden" name="type" value="question">
+            <label for="q" class="hide-text">知乎搜索</label><input type="text" class="zu-top-search-input" id="q" name="q" autocomplete="off" value="" placeholder="搜索问题、话题或人">
+            <button type="submit" class="zh-top-search-button"><span class="hide-text">搜索</span><span class="sprite-global-icon-magnifier-dark"></span></button>
+        </form>
+    </div>
+
+
+
+    <div id="zg-top-nav" class="zu-top-nav">
+        <ul class="zu-top-nav-ul zg-clear">
+
+            <li class="zu-top-nav-li current" id="zh-top-nav-home">
+                <a class="zu-top-nav-link" href="/" id="zh-top-link-home" data-za-c="view_home" data-za-a="visit_home" data-za-l="top_navigation_home">首页</a>
+            </li>
+            <li class="top-nav-topic-selector zu-top-nav-li " id="zh-top-nav-topic">
+                <a class="zu-top-nav-link" href="/topic" id="top-nav-dd-topic">话题</a>
+
+            </li>
+            <li class="zu-top-nav-li " id="zh-top-nav-explore">
+                <a class="zu-top-nav-link" href="/explore">发现</a>
+            </li>
+
+            <li class="top-nav-noti zu-top-nav-li ">
+                <a class="zu-top-nav-link" href="javascript:;" id="zh-top-nav-count-wrap" role="button"><span class="mobi-arrow"></span>消息</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+
