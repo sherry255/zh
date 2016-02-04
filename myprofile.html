@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maoya-知乎</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+            font-size: 13px;
+            line-height: 1.7;
+            word-wrap: break-word;
+            color: #222;
+            background-color: #fff;
+        }
+        .top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            width: 100%;
+            height: 45px;
+            background: #0767c8;
+            background: -webkit-linear-gradient(top,#086ed5,#055db5);
+            background: linear-gradient(to bottom,#086ed5,#055db5);
+            border-bottom: 1px solid #044e97;
+            box-shadow: 0 1px 2px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.15);
+        }
+        .zu-top .zg-wrap {
+            position: relative;
+            height: inherit;
+        }
+        .zg-wrap {
+            width: 960px;
+            margin: 0 auto;
+            clear: both;
+        }
+
+        .dropbtn {
+            background-color: #0777f9;
+            color: #edf9f4;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            min-width: 90px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0777f9;
+            min-width: 90px;
+            position:relative;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            position: relative;
+        }
+
+        .dropdown-content a:hover {background-color: #1823f9
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #0777f9;
+        }
+        .zu-top-link-logo {
+            background-image: url(/static/revved/img/sticky_header/new_logo@2x.9187366b.png)!important;
+            background-size: 61px 30px;
+            font-size: 22px;
+            text-decoration: none;
+        }
+        .zu-top-search {
+            position: relative;
+            float: left;
+            margin: 7px 0 0 12px;
+        }
+        .zu-top-search-form {
+            position: relative;
+            width: 367px;
+        }
+        form {
+            display: block;
+            margin-top: 0em;
+        }
+        button, input, select, textarea {
+            margin: 0;
+            font-family: inherit;
+            font-size: 100%;
+        }
+        .hide-text {
+            font: 0/0 a;
+            color: transparent;
+            text-shadow: none;
+            background-color: transparent;
+            border: 0;
+        }
+        .zu-top-search-input {
+            padding: 7px 50px 7px 10px;
+            width: 100%;
+            color: #49525c;
+            font-size: 14px;
+            line-height: 17px;
+            background-color: #e1eaf2;
+            border: 1px solid #045bb2;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,.2),0 1px 0 rgba(255,255,255,.1);
+            outline: 0;
+            box-sizing: border-box;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+        .zu-top-search-form .zu-top-search-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 100%;
+            background: #0e78e7;
+            background: -webkit-linear-gradient(top, #0e7bef, #0d73da);
+            background: linear-gradient(to bottom, #0e7bef, #0d73da);
+            border: 1px solid #045bb2;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .05), inset 0 1px 1px rgba(255, 255, 255, .15);
+            box-sizing: border-box;
+            outline: 0;
+            cursor: pointer;
+        }
+        .hide-text {
+            font: 0/0 a;
+            color: transparent;
+            text-shadow: none;
+            background-color: transparent;
+            border: 0;
+        }
+        .sprite-global-icon-magnifier-dark {
+            background-position: -22px -20px;
+            width: 15px;
+            height: 15px;
+        }
+        .zu-top-nav {
+            float: left;
+            position: relative;
+        }
+        .zu-top-nav-ul {
+            padding: 0;
+            margin: 0 0 0 18px;
+        }
+        .zg-clear {
+            height: 1%;
+        }
+        .zu-top-nav-link {
+            width: 54px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            display: block;
+            color: #f2f4f5;
+            text-shadow: 0 1px 1px rgba(0,0,0,.12);
+            font-size: 14px;
+        }
+        .zu-top-nav-li {
+            position: relative;
+            float: left;
+            margin: 0;
+            list-style: none;
+        }
+        .zu-noti7-popup,.zu-top-nav-live {
+            width: 315px;
+            left: 52px;
+            top: 48px;
+            border: 1px solid #ddd;
+            display: none;
+        }
+    </style>
+
+</head>
+<body class ="zhi">
+    <div class="top" role="navigation">
+        <div class="zg-wrap model shift clearfix" id="zh-top-inner">
+            <a href="/" class="zu-top-link-logo" id="zh-top-link-logo" data-za-c="view_home" data-za-a="visit_home"
+               data-za-l="top_navigation_zhihu_logo">知乎</a>
+        <div class="dropdown">
+            <button class="dropbtn">maoya</button>
+                <div class="dropdown-content">
+                    <a href="#">我的主页</a>
+                    <a href="#">私信</a>
+                    <a href="#">设置</a>
+                    <a href="#">退出</a>
+                </div>
+        </div>
+        <button class="zu-top-add-question" id="zu-top-add-question">提问</button>
+
+
+        <div role="search" id="zh-top-search" class="zu-top-search">
+            <form method="GET" action="/search" id="zh-top-search-form" class="zu-top-search-form">
+
+
+                <input type="hidden" name="type" value="question">
+                <label for="q" class="hide-text">知乎搜索</label><input type="text" class="zu-top-search-input" id="q"
+                                                                    name="q" autocomplete="off" value=""
+                                                                    placeholder="搜索问题、话题或人">
+                <button type="submit" class="zu-top-search-button"><span class="hide-text">搜索</span><span
+                    class="sprite-global-icon-magnifier-dark"></span></button>
+            </form>
+        </div>
+
+
+        <div id="zg-top-nav" class="zu-top-nav">
+            <ul class="zu-top-nav-ul zg-clear">
+
+                <li class="zu-top-nav-li " id="zh-top-nav-home">
+                    <a class="zu-top-nav-link" href="/" id="zh-top-link-home" data-za-c="view_home"
+                       data-za-a="visit_home" data-za-l="top_navigation_home">首页</a>
+                </li>
+                <li class="top-nav-topic-selector zu-top-nav-li " id="zh-top-nav-topic">
+                    <a class="zu-top-nav-link" href="/topic" id="top-nav-dd-topic">话题</a>
+
+                </li>
+                <li class="zu-top-nav-li " id="zh-top-nav-explore">
+                    <a class="zu-top-nav-link" href="/explore">发现</a>
+                </li>
+
+                <li class="top-nav-noti zu-top-nav-li ">
+                    <a class="zu-top-nav-link" href="javascript:;" id="zh-top-nav-count-wrap" role="button"><span
+                        class="mobi-arrow"></span>消息</a>
+                </li>
+
+
+            </ul>
+    </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
